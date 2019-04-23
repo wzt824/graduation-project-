@@ -1,0 +1,220 @@
+body, p, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, td, input, select, option, textarea {
+    margin: 0;
+    padding: 0; }
+
+a {
+    text-decoration: none; }
+
+li {
+    list-style: none; }
+
+header {
+    width: 100%;
+    height: 27px;
+    border-bottom: 1px solid #eee;
+    background: #fafafa;
+    font-size: 12px; }
+header a {
+    padding: 0 10px; }
+header a:hover {
+    color: #dd0000; }
+header #head {
+    width: 1190px;
+    margin: 0px auto;
+    line-height: 27px; }
+header #head #h_left {
+    float: left; }
+header #head #h_left .logo {
+    display: block;
+    color: #666;
+    width: 300px;
+    height: 27px;
+    float: left; }
+header #head #h_left #welcomeUesr {
+    float: left;
+    margin: 20px 0 0 30px;
+    display: none; }
+header #head #h_left #logo_box {
+    line-height: 55px;
+    margin-left: 50px;
+    float: left;
+    display: none; }
+header #head #h_right {
+    line-height: 27px;
+    float: right; }
+header #head #h_right a {
+    color: #666;
+    position: relative; }
+header #head #h_right a i {
+    display: inline-block;
+    width: 12px;
+    height: 15px;
+    margin-right: 10px;
+    background: url(../img/index-icon.png) no-repeat;
+    background-position: -45px -94px; }
+header #head #h_right a .icon_phone {
+    vertical-align: middle;
+    background: url(../img/mui-global-iconfont.gif) no-repeat; }
+header #head #h_right a img {
+    position: absolute;
+    left: -56px;
+    top: 18px;
+    z-index: 9999999;
+    display: none; }
+header #head #h_right a:hover {
+    color: #dd0000; }
+header #head #h_right #sjsc:hover img {
+    display: block; }
+
+section {
+    width: 100%; }
+section .section {
+    width: 1190px;
+    height: 102px;
+    margin: 0 auto;
+    align-items: center;
+    border-bottom: 2px solid #f3ebeb; }
+section .section .sec_left {
+    margin-top: 20px;
+    float: left; }
+section .section .sec_right {
+    margin-top: 30px;
+    float: right;
+    position: relative; }
+section .section .sec_right p {
+    font-size: 12px; }
+section .section .sec_right p a {
+    color: #999999; }
+section .section .sec_right p a:nth-child(1) {
+    font-weight: 500;
+    color: #000; }
+section .section .sec_right p a:nth-child(2) {
+    color: #000;
+    font-weight: 600;
+    margin: 0 64px; }
+section .section .sec_right .dian {
+    position: absolute;
+    left: 0;
+    top: 0; }
+section .section .sec_right .clearing{
+    left: 176px;
+}
+
+.content{
+    width: 1190px;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.address h3{
+    margin-bottom: 20px;
+}
+.address{
+    width: 100%;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    background: #f7f7f7;
+    border: 2px solid #dddddd;
+    border-top: 5px solid #d10125;
+    box-sizing: border-box;
+}
+.address label{
+    display: inline-block;
+    width: 200px;
+    text-align:right;
+    line-height: 30px;
+}
+.address input{
+    width: 700px;
+    height: 30px;
+    margin: 5px 0 5px 10px;
+}
+.paymentBox input{
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
+.payment{
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.payment span{
+    margin-left: 5px;
+    display: inline-block;
+    width: 110px;
+    height: 36px;
+    line-height: 36px;
+    background: #fff;
+    border:1px solid #ccc;
+}
+.payment span img{
+    vertical-align: middle;
+    margin: 0 3px;;
+    text-align: center;
+}
+.payment span .alipay{
+    margin: 2px 0 0 10px;
+}
+.clearBox p{
+    text-align: right;
+}
+.clearBox p span{
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+}
+.car_foot {
+    width: 100%;
+    height: 68px;
+    line-height: 68px;
+    background: #f5f5f5;
+}
+.car_foot .goBox {
+    float: right;
+}
+.car_foot .goBox .gobuy {
+    padding: 14px 43px;
+    background: #dd0000;
+    margin-left: 14px;
+    margin-right: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#public_fixed {
+    width: 72px;
+    position: fixed;
+    right: 40px;
+    bottom: 35px;
+    z-index: 999; }
+    #public_fixed .btn {
+      width: 72px;
+      height: 73px;
+      margin-bottom: 2px;
+      transition: all 1s; }
+    #public_fixed .qq_reg {
+      display: block;
+      width: 72px;
+      height: 73px;
+      background-color: #6da9de;
+      background-image: url(../img/r_qq.png); }
+    #public_fixed .btn_phone {
+      background-color: #fbb01f;
+      background-image: url(../img/r_phone.png);
+      position: relative; }
+      #public_fixed .btn_phone ._phone {
+        width: 192px;
+        height: 73px;
+        text-align: center;
+        line-height: 73px;
+        color: white;
+        font-size: 20px;
+        background: #ff811b;
+        position: absolute;
+        left: 0px;
+        display: none; }
+    #public_fixed .btn_top {
+      display: none;
+      background-color: #666666;
+      background-image: url(../img/r_top.png); }

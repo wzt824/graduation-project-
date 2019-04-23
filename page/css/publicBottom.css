@@ -1,0 +1,118 @@
+body, p, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, td, input, select, option, textarea {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%; }
+
+a {
+  text-decoration: none;
+  color: #333333; }
+
+.tabbottom {
+  width: 100%;
+  background: #ffffff;
+  border-top: 3px solid #e2e2e2;
+  margin-top: 20px;
+  overflow: hidden;
+  padding-bottom: 40px; }
+  .tabbottom .tabbar {
+    width: 1176px;
+    padding: 32px 12px;
+    margin: 0 auto; }
+    .tabbottom .tabbar .tabBox {
+      width: 150px;
+      float: left;
+      margin-right: 64px; }
+      .tabbottom .tabbar .tabBox h3 {
+        font-size: 14px;
+        line-height: 30px;
+        color: #000000; }
+      .tabbottom .tabbar .tabBox a {
+        display: block;
+        font-size: 12px;
+        line-height: 30px;
+        color: #000000; }
+      .tabbottom .tabbar .tabBox a:hover {
+        color: #dd0000; }
+    .tabbottom .tabbar .tabBox:last-child {
+      margin-right: 0; }
+    .tabbottom .tabbar .tabBoxs {
+      float: left;
+      width: 254px;
+      padding-left: 65px;
+      margin-right: 0;
+      border-left: 1px solid #e2e2e2; }
+      .tabbottom .tabbar .tabBoxs p {
+        margin: 15px 0;
+        width: 232px;
+        height: 30px;
+        background: url(../img/service-icon.png);
+        background-position: -11px -22px; }
+      .tabbottom .tabbar .tabBoxs a {
+        display: block;
+        width: 136px;
+        line-height: 26px;
+        text-indent: 55px;
+        height: 26px;
+        border: 1px solid #e2e2e2;
+        border-radius: 5px;
+        position: relative;
+        margin: 6px 0; }
+        .tabbottom .tabbar .tabBoxs a span {
+          position: absolute;
+          display: inline-block;
+          height: 25px;
+          width: 37px;
+          left: 6px;
+          background: url(../img/service-icon.png);
+          background-position: -7px -181px; }
+      .tabbottom .tabbar .tabBoxs a:hover {
+        color: #ffffff;
+        background: #dd0000;
+        transition: all 1s; }
+      .tabbottom .tabbar .tabBoxs a:hover span {
+        background: url(../img/service-icon.png);
+        background-position: -7px -147px; }
+      .tabbottom .tabbar .tabBoxs i {
+        display: block;
+        width: 112px;
+        height: 105px;
+        cursor: pointer;
+        background: url(../img/index_iqr.jpg);
+        background-position: -102px 0px; }
+
+footer {
+  width: 100%;
+  height: 60px;
+  background: #000000; }
+  footer .foot {
+    width: 1190px;
+    height: 60px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 60px; }
+    footer .foot .footLeft {
+      position: relative;
+      float: left; }
+      footer .foot .footLeft a {
+        color: #ffffff;
+        margin: 0 84px 0 16px; }
+      footer .foot .footLeft i {
+        display: block;
+        width: 33px;
+        height: 34px;
+        position: absolute;
+        background: url(../img/police_black.jpg);
+        left: 316px;
+        top: -8px;
+        bottom: 0;
+        margin: auto 0; }
+    footer .foot .footRight {
+      float: right; }
+      footer .foot .footRight a {
+        color: #ffffff;
+        margin-right: 5px; }
+
+/*# sourceMappingURL=publicBottom.css.map */

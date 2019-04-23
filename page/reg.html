@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>卓越——帐号注册</title>
+    <link rel="shortcut icon" href="img/bitbug_favicon.ico" />
+    <link rel="stylesheet" href="css/reg.css">
+</head>
+<body>
+    <section>
+        <div class="contant">
+            <div class="loginBox">
+                <a href="index.html" class="reg_logo"><img src="img/logo-title.png" alt=""></a>
+                <h4>欢迎注册，期待你的加入！</h4>
+                <div id="list">
+                    <div class="reg_hint_phone">
+                        <span class="hint_phone phone">邮箱/手机号</span>
+                        <input type="text" name="userphone" id="userphone">
+                        <span class="waringInfo_phone waringInfo_userphone"></span>
+                    </div>
+                    <div class="reg_hint_phone hint_yzm">
+                        <span class="hint_phone yzm">验证码</span>
+                        <input type="text" id="usercode">
+                        <div class="yzmBox"></div>
+                        <span class="waringInfo_phone waringInfo_yzm"></span>
+                    </div>
+                    <div class="reg_hint_phone">
+                        <span class="hint_phone pwd">密码</span>
+                        <input type="password" name="userphone" id="password">
+                        <span class="waringInfo_phone waringInfo_password"></span>
+                    </div>
+                    <div class="reg_hint_phone">
+                        <span class="hint_phone truepwd">确认密码</span>
+                        <input type="password" id="truepassword">
+                        <span class="waringInfo_phone waringInfo_turePass"></span>
+                    </div>
+                    <input id="btn" type="button" value="确认">
+                    <div id="messageBox" class="messageBox"></div>
+                    <h2 class="welLogin" style="font-size: 18px;margin-top: 15px"><a href="login.html">已有账号，欢迎登陆</a></h2>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Copyright 2018-2020 ZHUOYUE E-COMMERCE LIMITED All Rights Reserved</p>
+                <p>XX卓越科技有限公司 陇ICP备19000246号</p>
+                <p>甘肃省陇南市文县中寨镇某某村824号 电话：400-858-2020</p>
+                <p>
+                    <a href="javascript:;"><img src="img/chengxing.png" title="诚信网站"></a>
+                    <a href="javascript:;"><img src="img/yinlian.png" title="银联特约用户"></a>
+                    <a href="javascript:;"><img src="img/chengxin.png" title="实名认证"></a>
+                    <a href="javascript:;"><img src="img/police.png" title="公安备案"></a>
+                </p>
+            </div>
+        </div>
+        <!-- 固定部分 -->
+        <div id="public_fixed">
+            <a class="btn qq_reg" href="javascript:;"></a>
+            <div class="btn btn_phone">
+                <div class="_phone">400-858-2020</div>
+            </div>
+            <div class="btn btn_top"></div>
+        </div>
+    </section>
+</body>
+</html>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/reg.js"></script>
+<script>
+    $(function(){
+        $("#btn")[0].onclick= function(){
+            //1、创建对象
+            let xhr = new XMLHttpRequest();
+            //2、设置请求参数
+            xhr.open("post","php/reg.php",true);
+            //3、设置回调函数
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    //5、接收响应
+                    let str = xhr.responseText;
+                    if(str=="1"){
+                        alert("注册成功！");
+                        location.href="login.html";
+                    }else if(str=="-1"){
+                        $(".messageBox")[0].style.display = "block";
+                        $(".messageBox")[0].innerHTML="注册失败，用户名已经存在";
+                    }else{
+                        $(".messageBox")[0].style.display = "block";
+                        $(".messageBox")[0].innerHTML="注册失败，服务器出错！";
+                    }
+                }
+            }
+            xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            //4、发送请求
+            let str = "userphone="+$("#userphone").val()+"&password="+$("#password").val();
+            xhr.send(str);
+        }
+    });
+</script>

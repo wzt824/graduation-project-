@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="shortcut icon" href="img/bitbug_favicon.ico" />
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <header>
+        <div id="head">
+            <div id="h_left">
+                <a class="logo" href="javascript:;">你好，欢迎来到卓越官方商城！</a>
+                <div id="welcomeUesr">欢迎回家，
+                    <span id="welcome"></span> &nbsp; &nbsp; &nbsp;|
+                    <a href="login.html" id="logout">注销</a>
+                </div>
+                <p id="logo_box">
+                    <a href="login.html">请登录</a>
+                    <a href="reg.html">免费注册</a>
+                </p>
+            </div>
+            <div id="h_right">
+                <a href="javascript:;">我的卓越 </a>|
+                <a href="index.html">品牌官网 </a>|
+                <a href="javascript:;">关于我们 </a>|
+                <a href="javascript:;" id="sjsc"><i class="icon_phone"></i>手机商城
+                    <img src="img/index_iqr.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="section">
+            <div class="sec_left"><a href="index.html"><img src="img/cn_logo.png" alt="" style="width: 170px;height: 70px"></a></div>
+            <div class="sec_right">
+                <a href="javascript:;"><img src="img/cartnew_flow.png" alt=""></a>
+                <div class="dian"><img src="img/cart_flow_black.gif" alt=""></div>
+                <p>
+                    <a href="javascript:;">我的购物车</a>
+                    <a href="javascript:;">填写核对订单信息</a>
+                    <a href="javascript:;">成功提交订单</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="contant">
+        <div class="cont">
+            <h1>我的购物车</h1>
+            <div class="empotyCar">
+                <img src="img/cart-empty-bg.png" alt="">
+                <span>购物车内暂时没有商品，您可以<a href="index.html">马上去挑选商品</a>或<a href="javascript:;">查看我的收藏</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="shoppingCar">
+        <div class="shopCar">
+            <div class="car_tit">
+                <h1>我的购物车</h1>
+                <ul>
+                    <li class="lis1">
+                        <input type="checkbox" id="selectAll">
+                    </li>
+                    <li class="lis2">商品编号</li>
+                    <li class="lis3">商品图片</li>
+                    <li class="lis4">商品信息</li>
+                    <li class="lis5">商品单价</li>
+                    <li class="lis6">商品数量</li>
+                    <li class="lis7">商品小计</li>
+                    <li class="lis8">删除</li>
+                </ul>
+            </div>
+            <div class="car_product">
+                <!-- 动态创建 -->
+            </div>
+            <div class="car_sale">
+                <h1>可用的优惠券</h1>
+            </div>
+            <div class="car_account">
+                <div class="car_up">
+                     <p class="car_one"><span class="bao">全场鞋服包邮</span>+￥<span>0.00</span></p>
+                </div>
+                <div class="car_two">
+                    <div class="t_left">
+                        <span class="t_del">删除选中的商品</span>
+                        <span class="t_empty">清空购物车</span>
+                    </div>
+                    <div class="t_right">
+                        应付金额
+                        <span class="t_numBox">￥<span class="t_num">0.00</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="car_foot">
+                <div class="goBox">
+                    <a href="index.html" class="goShop">继续购物</a>
+                    <a href="#" class="gobuy" >提交订单</a><!--clearing.html-->
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- 固定部分 -->
+     <div id="public_fixed">
+        <a class="btn qq_reg" href="javascript:;"></a>
+        <div class="btn btn_phone">
+            <div class="_phone">400-858-2020</div>
+        </div>
+        <div class="btn btn_top"></div>
+    </div>
+    <div id="bottomBox">
+        <!-- 尾部部分 -->
+    </div>
+</body>
+</html>
+<script>
+</script>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/cookie.js"></script>
+<script src="js/cart.js"></script>
+<script>
+    $(function(){
+        var ifUserPhone = getCookie("userphone");
+        if(ifUserPhone == null){
+            alert("亲，请登录！");
+            location.href="login.html"
+        }
+        $("#bottomBox").load("publicBottom.html");
+
+        $(".gobuy").click(function () {
+            var getMoney = $(".t_num").html();
+            setCookie("proMoney",getMoney,1);
+            location.href="clearing.html";
+        });
+    });
+</script>

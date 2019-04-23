@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>【卓越官方商城】- 卓越，为爱负责</title>
+    <link rel="shortcut icon" href="img/bitbug_favicon.ico" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper-4.1.0.min.css">
+</head>
+<body>
+    <div id="publicTopBox">
+        <!-- 放头部公共部分 -->
+    </div>
+    <div id="sliderBox" style="height: 550px;">
+		<!--放轮播图-->
+    </div>
+    <!-- 图片展示区开始 -->
+    <div class="zShowBox">
+        <div class="zshow">
+            <ul class="showUls">
+                <li class="item item1">
+                    <a href="javascript:;"><img src="img/lkt_0626.jpg" alt=""></a>
+                    <div class="showLayer">
+                        <div class="showMin">
+                            <a href="javascript:;" title="篮球系列" class="textChange productCookie">立即选购</a>
+                            <div class="showMinLayer"></div>
+                        </div>
+                    </div>
+                    <h3><a href="javascript:;">篮球明星战靴</a></h3>
+                    <p><a href="javascript:;">汤普森三代</a>|<a href="javascript:;">要疯系列</a>|<a href="javascript:;">篮球服装</a></p>
+                </li>
+                <li class="item item1">
+                    <a href="javascript:;"><img src="img/pb_0626_2.jpg" alt=""></a>
+                    <div class="showLayer">
+                        <div class="showMin">
+                            <a href="javascript:;" title="跑步系列" class="textChange productCookie">立即选购</a>
+                            <div class="showMinLayer"></div>
+                        </div>
+                    </div>
+                    <h3><a href="javascript:;">跑步系列</a></h3>
+                    <p><a href="javascript:;">闪能科技跑鞋</a>|<a href="javascript:;">夏季新款</a>|<a href="javascript:;">舒适气垫</a>|<a href="javascript:;">跑步服装</a></p>
+                </li>
+                <li class="item item2">
+                    <a href="javascript:;"><img src="img/uni_lq.gif" alt=""></a>
+                    <div class="showLayer">
+                        <div class="showMin">
+                            <a href="javascript:;" title="足球系列" class="textChange productCookie">立即选购</a>
+                            <div class="showMinLayer"></div>
+                        </div>
+                    </div>
+                    <h3><a href="javascript:;">汤普森战靴定制</a></h3>
+                </li>
+                <li class="item item2">
+                    <a href="javascript:;"><img src="img/fz_0907.jpg" alt=""></a>
+                    <div class="showLayer">
+                        <div class="showMin">
+                            <a href="javascript:;" title="生活系列" class="textChange productCookie">立即选购</a>
+                            <div class="showMinLayer"></div>
+                        </div>
+                    </div>
+                    <h3><a href="javascript:;">2018冬季上新</a></h3>
+                </li>
+                <li class="item item2">
+                    <a href="javascript:;"><img src="img/fugu_0201.jpg" alt=""></a>
+                    <div class="showLayer">
+                        <div class="showMin">
+                            <a href="javascript:;" title="休闲系列" class="textChange productCookie">立即选购</a>
+                            <div class="showMinLayer"></div>
+                        </div>
+                    </div>
+                    <h3><a href="javascript:;">复古呈新 休闲系列</a></h3>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 图片展示区结束 -->
+    <!-- 商品轮播图开始 -->
+    <div class="slideshowBox">
+        <div class="slideshow">
+            <div class="slideshowUp">
+                <h3><a href="javascript:;">A-FLASHFOAM闪能科技</a></h3>
+                <h1><a href="javascript:;">轻量化EVA高回弹复合材料，安踏自主研发，为跑者提供充足动力。</a></h1>
+            </div>
+            <div class="slideshowDown">
+                <div id="slideshowDownLeft">
+                    <!--放轮播图-->
+                </div>
+                <div id="slideshowDownRight">
+                    <!--放轮播图-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 商品轮播图结束 -->
+    <!-- 商品列表展示区开始 -->
+    <div class="productListBox">
+        <div class="productList">
+            <ul class="proLis">
+               <!-- 动态获取 -->
+            </ul>
+            <div id="loadMore">
+                <div class="pro_buy_load">
+                    <div class="buy_now">
+                        <a href="javascript:;" title="跑步系列" class="textChange_load productCookie">选购更多商品<span>>></span></a>
+                        <div class="ProshowMinLayer_load"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 商品列表展示区结束 -->
+    <div id="publicBottomBox">
+        <!-- 放尾部公共部分 -->
+    </div>
+</body>
+</html>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/getStyle.js" ></script>
+<script type="text/javascript" src="js/mover.js" ></script>
+<script type="text/javascript" src="js/slider.js" ></script>
+<script src="js/index.js"></script>
+<script>
+    window.onload = function(){
+        //大轮播图
+        let sliderBox = document.getElementById("sliderBox");
+        var width1 = document.documentElement.clientWidth || document.body.clientWidth;
+		let s1 = new Slider(sliderBox,width1,550,["img/ban3.jpg","img/kt4_928.jpg","img/yurong_912.jpg","img/81_tanbanner2.jpg"],
+				140,30,"#000","red",
+                true,-1,2500);
+
+        //小轮播图
+        let slideshowDownLeft = document.getElementById("slideshowDownLeft");
+		let s2 = new SliderMin(slideshowDownLeft,583,406,["img/81_1.jpg","img/81_2.jpg","img/81_3.jpg"],
+				10,"#eee","#000",
+                true,-1,3500);
+
+        //小轮播图
+        let slideshowDownRight = document.getElementById("slideshowDownRight");
+		let s3 = new SliderMinTwo(slideshowDownRight,583,406,["img/81_4.jpg","img/81_5.jpg","img/fz_830.jpg"],
+				10,"#eee","#000",
+                true,-1,3000);
+	};
+    //定义获取词语下标
+    var a_idx = 0;
+    $(function(){
+        $("#publicTopBox").load("publicTop.html");
+        $("#publicBottomBox").load("publicBottom.html");
+
+        $.ajax({
+            type:"get",
+            url:"php/getGoodsList.php",
+            success:function(data){
+                console.log(data);
+                var productlist = '';
+                for(var i=0;i<data.length;i++){
+                    // console.log(data[i].beiyong24);
+                    if(data[i].beiyong24 == "是"){
+                        productlist+="<li>\
+                            <div class='ulLiBox'>\
+                                <a href='javascript:;' class='imgBox'><img id='pro' class='bigloveimg' src='"+ data[i].goodsImg +"' alt=''></a>\
+                                <div id='pro' class='minimgBox'>\
+                                        <a class='minleft' href='javascript:;'><img src='img/feel3.png' alt=''></a>\
+                                        <div class='minbox'>\
+                                            <ul class='imgUls'>\
+                                                <li>\
+                                                    <a href='javascript:;'><img src='"+ data[i].goodsImg +"' alt=''></a>\
+                                                </li>\
+                                                <li>\
+                                                    <a href='javascript:;'><img src='"+ data[i].beiyong5 +"' alt=''></a>\
+                                                </li>\
+                                                <li>\
+                                                    <a href='javascript:;'><img src='"+ data[i].beiyong6 +"' alt=''></a>\
+                                                </li>\
+                                                <li>\
+                                                    <a href='javascript:;'><img src='"+ data[i].beiyong7 +"' alt=''></a>\
+                                                </li>\
+                                                <li>\
+                                                    <a href='javascript:;'><img src='"+ data[i].beiyong8 +"' alt=''></a>\
+                                                </li>\
+                                                <li>\
+                                                    <a href='javascript:;'><img src='"+ data[i].beiyong9 +"' alt=''></a>\
+                                                </li>\
+                                                <li>\
+                                                    <a href='javascript:;'><img src='"+ data[i].beiyong10 +"' alt=''></a>\
+                                                </li>\
+                                            </ul>\
+                                        </div>\
+                                        <a class='minright' href='javascript:;'><img src='img/feel4.png' alt=''></a>\
+                                </div>\
+                                <h3 class='produ_info'>"+ data[i].goodsName +"</h3>\
+                                <p>￥<span class='prode_price'>"+ data[i].goodsPrice +"</span></p>\
+                                <div class='pro_buy'>\
+                                    <div class='buy_now'>\
+                                        <span class='proId' style='display:none;'>"+data[i].goodsId+"</span>\
+                                        <a href='javascript:;' class='textChange'>立即选购</a>\
+                                        <div class='ProshowMinLayer'></div>\
+                                    </div>\
+                                </div>\
+                            </div>\
+                        </li>";
+                    }
+                        $(".proLis").html(productlist);
+
+                        //循环去除：
+                        $(".imgUls li").each(function(){
+                            let imgValue = $(this).find("img").attr("src");
+                            if(imgValue == 0){
+                                $(this).remove();
+                            }
+                        });
+
+
+
+                        xiaoguo();
+
+                }
+    			$(".proLis li").each(function(){
+    				$(this).find(".buy_now").click(function(){
+    					var proIds = $(this).find(".proId").html();
+
+    //					setCookie("proXq",proIds,-1);
+    					setCookie("proXq",proIds,1);
+    					window.open("detail.html");
+    				});
+    			});
+            },
+            dataType:"json",
+        });
+
+        $("body").click(function(e) {
+            //需要显示的词语
+            var a = new Array("富强","民主", "文明", "和谐","自由", "平等", "公正","法治", "爱国", "敬业","诚信", "友善");
+            //设置词语给span标签
+            var $i = $("<span/>").text(a[a_idx]);
+            //下标等于原来下标+1  余 词语总数
+            a_idx = (a_idx + 1)% a.length;
+            //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+            //获取x和y的指针坐标
+            var x = e.pageX, y = e.pageY;
+            //在鼠标的指针的位置给$i定义的span标签添加css样式
+            $i.css({"z-index" : 999999999999999999999999999999999999999999999999999999999999999999999,
+                "top" : y - 20,
+                "left" : x,
+                "position" : "absolute",
+                "font-weight" : "bold",
+                "color" : color16(),
+            });
+            //在body添加这个标签
+            $("body").append($i);
+            //animate() 方法执行 CSS 属性集的自定义动画。
+            //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+            //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+            $i.animate({
+                //将原来的位置向上移动180
+                "top" : y - 180,
+                "opacity" : 0
+                //1500动画的速度
+            }, 1500, function() {
+                //时间到了自动删除
+                $i.remove();
+            });
+        });
+    });
+    function xiaoguo(){
+    //商品列表展示区imgUls
+    let proLis = $(".proLis")[0].children;
+    let minleft = $(".minleft");
+    let minright = $(".minright");
+    for(let i=0;i<proLis.length;i++){
+        let oo = document.getElementsByClassName("bigloveimg")[i].src;
+        let proleft = 0;
+        proLis[i].onmouseenter = function(){
+            //改变大盒子样式
+            $(".ulLiBox")[i].style.cssText = "z-index:9;top:-10px;box-shadow:0 0 5px 5px #ddd";
+            let imgUls = $(".imgUls")[i].children;
+            //改变小图盒子的样式
+            $(".minimgBox")[i].style.cssText="height:32px;overflow:hidden;";
+            for(let n=0,len=imgUls.length;n<len;n++){
+                $(".imgUls")[i].style.width = (len*36) +"px";
+                //增加判断   当小图个数大于6时 显示左右箭头
+                if(len-6 > 0){
+                    minleft[i].onclick = function(){
+                        proleft = proleft - 35;
+                        if($(".imgUls")[i].offsetLeft<=0){
+                            $(".imgUls")[i].style.cssText = "left:" +proleft +"px;";
+                            let syu = (len-6)*35;
+                            $(".imgUls")[i].style.cssText = "left:-"+syu+"px;";
+                        }
+                    }
+                    minright[i].onclick = function(){
+                        proleft = proleft + 35;
+                        $(".imgUls")[i].style.cssText = "left:" +proleft +"px;";
+                        if($(".imgUls")[i].offsetLeft>=0){
+                            $(".imgUls")[i].style.cssText = "left:0px;";
+                        }
+                    }
+                }else{
+                    minleft[i].style.cssText = "display:none";
+                    minright[i].style.cssText = "display:none";
+                }
+                //通过小图查看相应大图
+                imgUls[n].onmouseenter = function(){
+                    let aa = $(this).find("img").attr("src");
+                    document.getElementsByClassName("bigloveimg")[i].src=aa;
+                }
+                imgUls[n].onmouseleave = function(){
+                    let aa = $(this).find("img").attr("src");
+                    document.getElementsByClassName("bigloveimg")[i].src=oo;
+                }
+            }
+            //立即购买  效果
+            $(".pro_buy")[i].style.cssText="height:32px;overflow:hidden";
+            $(".buy_now")[i].onmouseenter = function(){
+                $(".ProshowMinLayer")[i].style.cssText = "display:block;";
+                $(this).find(".ProshowMinLayer").animate({
+                    left:'0px'
+                },1500);
+                $(this).find(".textChange").css({"color":"white","transition":"all 2.2s","z-index":10});
+            }
+            $(".buy_now")[i].onmouseleave = function(){
+                $(".ProshowMinLayer")[i].style.cssText = "display:none;";
+                $(this).find(".ProshowMinLayer").animate({
+                    left:'-120px'
+                },1500);
+                $(this).find(".textChange").css({"color":"black","transition":"all 2.2s","z-index":10});
+            }
+        }
+        proLis[i].onmouseleave = function(){
+            $(".ulLiBox")[i].style.cssText = "z-index:8;top: 0;";
+            $(".minimgBox")[i].style.cssText="height:0px;overflow:hidden";
+            $(".pro_buy")[i].style.cssText="height:0px;overflow:hidden";
+            $(".ProshowMinLayer")[i].style.cssText = "display:none;";
+            $(this).find(".textChange").css({"color":"black"});
+        }
+    }
+    //加载更多商品特效
+    $(".pro_buy_load")[0].onmouseenter = function(){
+        $(".ProshowMinLayer_load")[0].style.cssText = "display:block;";
+        $(this).find(".ProshowMinLayer_load").animate({
+            left:'0px'
+        },1500);
+        $(this).find(".textChange_load").css({"color":"#fff","transition":"all 2.2s","z-index":10});
+    }
+    $(".pro_buy_load")[0].onmouseleave = function(){
+        $(".ProshowMinLayer_load")[0].style.cssText = "display:none;";
+        $(this).find(".ProshowMinLayer_load").animate({
+            left:'-300px'
+        },1500);
+        $(this).find(".textChange_load").css({"color":"#dbdbdb","transition":"all 2.2s","z-index":10});
+    }
+}
+
+
+    function productCookie(){
+        let productsCookie = document.getElementsByClassName('productCookie');
+        console.log(productsCookie);
+        for(let i =0 ;i<productsCookie.length;i++){
+            productsCookie[i].onclick=function(){
+                // let pC = productsCookie[i].innerHTML;
+                let pC = productsCookie[i].title;
+                console.log(pC);
+                setCookie("selectPro",pC,12);
+                window.open("pro_list.html");
+            }
+        }
+    }
+    productCookie();
+
+    function color16(){//十六进制颜色随机
+        var r = Math.floor(Math.random()*256);
+        var g = Math.floor(Math.random()*256);
+        var b = Math.floor(Math.random()*256);
+        var color = '#'+r.toString(16)+g.toString(16)+b.toString(16);
+        return color;
+    }
+</script>

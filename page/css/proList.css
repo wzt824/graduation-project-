@@ -1,0 +1,191 @@
+body, p, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, td, input, select, option, textarea {
+  margin: 0;
+  padding: 0; }
+
+.proListbox {
+  width: 100%; }
+  .proListbox .proList {
+    width: 1190px;
+    margin: 0 auto; }
+    .proListbox .proList .top_proList {
+      width: 1190px;
+      height: 37px;
+      margin: 30px 0;
+      background: #f1f1f1;
+      border-top: 1px solid #dddddd;
+      font-size: 12px;
+      border-bottom: 1px solid #dddddd;
+      display: flex;
+      align-items: center; }
+      .proListbox .proList .top_proList .sort {
+        float: left;
+        color: #000;
+        margin-left: 18px; }
+        .proListbox .proList .top_proList .sort a:first-child {
+          background: #e4393c;
+          color: #fff; }
+        .proListbox .proList .top_proList .sort a {
+          float: left;
+          display: block;
+          padding: 3px 5px;
+          background: #fff;
+          border: 1px solid #ddd; }
+      .proListbox .proList .top_proList .serve {
+        float: left;
+        background: #fff;
+        padding: 3px 12px 3px 5px;
+        margin-left: 18px;
+        text-decoration: line-through;
+        border: 1px solid #dddddd;
+        display: flex;
+        align-items: center; }
+        .proListbox .proList .top_proList .serve input {
+          margin-left: 8px; }
+      .proListbox .proList .top_proList .search {
+        float: left;
+        margin-left: 25px; }
+        .proListbox .proList .top_proList .search input {
+          outline: none; }
+        .proListbox .proList .top_proList .search #serach_text {
+          color: #757575;
+          text-indent: 5px;
+          width: 106px;
+          border: 1px solid #ddd;
+          height: 20px; }
+        .proListbox .proList .top_proList .search #serach_btn {
+          width: 50px;
+          height: 22px;
+          margin-left: -5px;
+          color: #000;
+          border: 1px solid #ddd;
+          background: #f1f1f1;
+          cursor: pointer; }
+      .proListbox .proList .top_proList .skipBox {
+        width: 168px;
+        height: 21px;
+        line-height: 21px;
+        margin-left: 315px; }
+        .proListbox .proList .top_proList .skipBox b {
+          float: left;
+          padding: 0 8px;
+          font-weight: 100; }
+          .proListbox .proList .top_proList .skipBox b .yeNum {
+            color: red; }
+        .proListbox .proList .top_proList .skipBox i {
+          float: left;
+          display: block;
+          width: 21px;
+          padding: 0 12px;
+          height: 21px;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          cursor: pointer; }
+        .proListbox .proList .top_proList .skipBox #skip_left {
+          margin-left: -1px;
+          background-image: url(../img/service-icon.png);
+          background-size: auto;
+          background-position: 5px 222px; }
+        .proListbox .proList .top_proList .skipBox #skip_right {
+          margin-left: -1px;
+          background-image: url(../img/service-icon.png);
+          background-position: -24px 222px; }
+    .proListbox .proList .productList .proLis li {
+      height: 370px; }
+      .proListbox .proList .productList .proLis li .ulLiBox {
+        position: relative; }
+        .proListbox .proList .productList .proLis li .ulLiBox h4 {
+          margin-bottom: 5px; }
+        .proListbox .proList .productList .proLis li .ulLiBox .pro_price {
+          color: red; }
+        .proListbox .proList .productList .proLis li .ulLiBox .minimgBox {
+          height: 32px !important; }
+          .proListbox .proList .productList .proLis li .ulLiBox .minimgBox .imgUls li {
+            height: 28px;
+            width: 30px;
+            padding: 1px;
+            border: 1px solid #ddd; }
+            .proListbox .proList .productList .proLis li .ulLiBox .minimgBox .imgUls li a img {
+              width: 28px !important;
+              height: 28px !important; }
+        .proListbox .proList .productList .proLis li .ulLiBox .pro_buy a {
+          display: block;
+          float: left;
+          width: 140px;
+          height: 30px;
+          line-height: 30px;
+          background: #fff;
+          color: #333333;
+          border: 1px solid #ddd;
+          cursor: pointer;
+          position: relative; }
+          .proListbox .proList .productList .proLis li .ulLiBox .pro_buy a i {
+            position: absolute;
+            display: inline-block;
+            height: 22px;
+            width: 29px;
+            margin-top: 4px;
+            background: red; }
+        .proListbox .proList .productList .proLis li .ulLiBox .pro_buy .atOnce {
+          text-indent: 25px;
+          margin-left: 2px; }
+          .proListbox .proList .productList .proLis li .ulLiBox .pro_buy .atOnce i {
+            left: 10px;
+            background: url(../img/list-icons-1008.png);
+            background-position: 0px -5px; }
+        .proListbox .proList .productList .proLis li .ulLiBox .pro_buy .atOnce:hover {
+          border: 1px solid #be0106;
+          color: #be0106; }
+          .proListbox .proList .productList .proLis li .ulLiBox .pro_buy .atOnce:hover i {
+            background: url(../img/list-icons-1008.png);
+            background-position: 0px -28px; }
+        .proListbox .proList .productList .proLis li .ulLiBox .pro_buy .textChange {
+          text-indent: -25px; }
+          .proListbox .proList .productList .proLis li .ulLiBox .pro_buy .textChange i {
+            right: 10px;
+            background: url(../img/list-icons-1008.png);
+            background-position: 0px 51px; }
+        .proListbox .proList .productList .proLis li .ulLiBox .pro_buy .textChange:hover {
+          border: 1px solid #be0106;
+          color: #be0106 !important; }
+          .proListbox .proList .productList .proLis li .ulLiBox .pro_buy .textChange:hover i {
+            background: url(../img/list-icons-1008.png);
+            background-position: 0px 28px; }
+        .proListbox .proList .productList .proLis li .ulLiBox .collect_JoinCar {
+          position: absolute;
+          width: 268px;
+          background: rgba(255, 255, 255, 0.9);
+          padding: 10px;
+          z-index: 100;
+          bottom: 17px;
+          display: none; }
+          .proListbox .proList .productList .proLis li .ulLiBox .collect_JoinCar .minbox {
+            display: flex;
+            justify-content: center; }
+            .proListbox .proList .productList .proLis li .ulLiBox .collect_JoinCar .minbox .imgUls li {
+              width: 32px;
+              height: 32px;
+              line-height: 32px;
+              color: #333;
+              border: 1px solid #ddd;
+              display: flex;
+              justify-content: center; }
+              .proListbox .proList .productList .proLis li .ulLiBox .collect_JoinCar .minbox .imgUls li img {
+                width: 28px;
+                height: 28px;
+                margin-top: 2px; }
+          .proListbox .proList .productList .proLis li .ulLiBox .collect_JoinCar p {
+            color: #fff;
+            font-size: 14px; }
+            .proListbox .proList .productList .proLis li .ulLiBox .collect_JoinCar p .abolish {
+              padding: 3px 8px;
+              background: #a3a3a3;
+              margin-right: 15px;
+              border-radius: 3px;
+              cursor: pointer; }
+            .proListbox .proList .productList .proLis li .ulLiBox .collect_JoinCar p .nuw_buy {
+              padding: 3px 8px;
+              background: #d11919;
+              border-radius: 3px;
+              cursor: pointer; }
+
+/*# sourceMappingURL=proList.css.map */

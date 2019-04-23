@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结算</title>
+    <link rel="shortcut icon" href="img/bitbug_favicon.ico" />
+    <link rel="stylesheet" href="css/clearing.css">
+</head>
+<body>
+    <header>
+        <div id="head">
+            <div id="h_left">
+                <a class="logo" href="javascript:;">你好，欢迎来到卓越官方商城！</a>
+                <div id="welcomeUesr">欢迎回家，
+                    <span id="welcome"></span> &nbsp; &nbsp; &nbsp;|
+                    <a href="login.html" id="logout">注销</a>
+                </div>
+                <p id="logo_box">
+                    <a href="login.html">请登录</a>
+                    <a href="reg.html">免费注册</a>
+                </p>
+            </div>
+            <div id="h_right">
+                <a href="javascript:;">我的卓越 </a>|
+                <a href="index.html">品牌官网 </a>|
+                <a href="javascript:;">关于我们 </a>|
+                <a href="javascript:;" id="sjsc"><i class="icon_phone"></i>手机商城
+                    <img src="img/index_iqr.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="section">
+            <div class="sec_left"><a href="index.html"><img src="img/cn_logo.png" alt="" style="width: 170px;height: 70px"></a></div>
+            <div class="sec_right">
+                <a href="javascript:;"><img src="img/cartnew_flow.png" alt=""></a>
+                <div class="dian"><img src="img/cart_flow_black.gif" alt=""></div>
+                <div class="dian clearing"><img src="img/cart_flow_black.gif" alt=""></div>
+                <p>
+                    <a href="javascript:;">我的购物车</a>
+                    <a href="javascript:;">填写核对订单信息</a>
+                    <a href="javascript:;">成功提交订单</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="content">
+        <form class="address">
+            <h3>添加收货地址：</h3>
+            <label>收货人：</label><input type="text" class="name"></br>
+            <label>联系电话：</label><input type="tel" maxlength="11" class="tel"></br>
+            <label>收货地址：</label><input type="text" class="add_ress"></br>
+            <label>邮编：</label><input type="tel" maxlength="6" class="email">
+        </form>
+        <div class="address paymentBox">
+            <!--要实现radio标签的多选一，其name属性不可或缺 -->
+            <h3>支付方式选择：</h3>
+            <div class="payment">
+                <div class="xxl">
+                    <input name="payment" type="radio" value="xxl">
+                    <span>
+                        <img src="./img/xxl.png" alt="">货到付款
+                    </span>
+                </div>
+                <div class="wechat">
+                    <input name="payment" type="radio" value="wechat">
+                    <span>
+                        <img src="./img/wechat.png" alt="">微信支付
+                    </span>
+                </div>
+                <div class="wechat">
+                    <input name="payment" type="radio" value="alipay">
+                    <span>
+                        <img class="alipay" src="./img/alipay.png" alt="">
+                    </span>
+                </div>
+                <div class="wechat">
+                    <input name="payment" type="radio" value="card">
+                    <span>
+                        <img src="./img/card.png" alt="">银联支付
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="address clearBox">
+            <h3>总金额结算：</h3>
+            <p>总金额：<span class="numMoney"></span> 元</p>
+        </div>
+        <div class="car_foot">
+            <div class="goBox">
+                <a href="javascript:;" class="gobuy" id="gobuy">结算</a>
+            </div>
+        </div>
+    </div>
+    <!-- 固定部分 -->
+    <div id="public_fixed">
+        <a class="btn qq_reg" href="javascript:;"></a>
+        <div class="btn btn_phone">
+            <div class="_phone">400-858-2020</div>
+        </div>
+        <div class="btn btn_top"></div>
+    </div>
+    <div id="bottomBox">
+        <!-- 尾部部分 -->
+    </div>
+</body>
+</html>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/cookie.js"></script>
+<script src="js/clearing.js"></script>
+<script>
+    $(function () {
+        var ifUserPhone = getCookie("userphone");
+        if(ifUserPhone == null){
+            alert("亲，请登录！");
+            location.href="login.html"
+        }
+        $("#publicTopBox").load("publicTop.html");
+        $("#bottomBox").load("publicBottom.html");
+
+        //获取cookie（上一个页面传来的商品总值）
+        $(".numMoney").html(getCookie("proMoney"));
+
+
+
+        //根据input的name属性取值
+        var modeStr = "";
+        $("input[type='radio']").change(function () {
+            if($('input:radio:checked').val() == "xxl"){//$('input:radio:checked').val()  //要想获取某个radio的值
+                modeStr = "货到付款";
+            }else if($('input:radio:checked').val() == "wechat"){
+                modeStr = "微信支付";
+            }else if($('input:radio:checked').val() == "alipay"){
+                modeStr = "支付宝支付";
+            }else if($('input:radio:checked').val() == "card"){
+                modeStr = "银联支付";
+            }
+            return modeStr;
+        })
+
+        $("#gobuy").click(function (){
+            let addname = $(".name").val();
+            let addtel = $(".tel").val();
+            let add_ress = $(".add_ress").val();
+            let email = $(".email").val();
+
+            let xhr = new XMLHttpRequest();
+            xhr.open("get","/anta/page/php/addOrder.php?userPhone="+getCookie('userphone')+"&addressName="+addname+"&addressPhone="+addtel+"&address="+add_ress+"&addressCode="+email+"&addressMode="+modeStr+"&sumMoney="+getCookie('proMoney'),true);
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4&&xhr.status==200){
+                    let d = xhr.responseText;
+                    if(d==1){
+                        alert('结算成功!');
+                        location.href="success.html";
+                    }else if(d==0){
+                        alert('结算失败!');
+                    }
+                }
+            }
+            xhr.send();
+        })
+    })
+
+
+</script>

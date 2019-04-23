@@ -1,0 +1,378 @@
+body, p, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, td, input, select, option, textarea {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+section {
+  width: 100%; }
+  section .section {
+    width: 1190px;
+    margin: 0 auto; }
+    section .section .details_up {
+      width: 1190px;
+      font-size: 12px;
+      padding: 30px 0 20px; }
+      section .section .details_up a {
+        color: #666666; }
+      section .section .details_up a:last-child {
+        color: #000; }
+    section .section .details_down {
+      width: 1190px;
+      font-size: 12px;
+      overflow: hidden;
+      color: #666666; }
+      section .section .details_down .details_left {
+        float: left;
+        width: 100px;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; }
+        section .section .details_down .details_left .top_jian {
+          position: absolute;
+          width: 36px;
+          height: 21px;
+          background: url(../img/top.png);
+          top: 0;
+          cursor: pointer; }
+        section .section .details_down .details_left .bottom_jian {
+          position: absolute;
+          width: 36px;
+          height: 21px;
+          background: url(../img/bottom.png);
+          bottom: 0;
+          cursor: pointer; }
+        section .section .details_down .details_left .UlsBox {
+          width: 100px;
+          height: 525px;
+          overflow: hidden;
+          position: relative; }
+          section .section .details_down .details_left .UlsBox #detUls {
+            position: absolute;
+            top: 0;
+            width: 100px; }
+            section .section .details_down .details_left .UlsBox #detUls li {
+              font-size: 20px;
+              width: 98px;
+              height: 98px;
+              margin-bottom: 5px;
+              border: 1px solid #eee;
+              cursor: pointer; }
+              section .section .details_down .details_left .UlsBox #detUls li img {
+                width: 98px;
+                height: 98px; }
+            section .section .details_down .details_left .UlsBox #detUls li:last-child {
+              margin-bottom: 0px; }
+      section .section .details_down .details_rBox {
+        width: 1070px;
+        float: left;
+        padding-bottom: 5px;
+        overflow: hidden;
+        margin-left: 20px;
+        border-bottom: 2px solid #f0f0f0; }
+        section .section .details_down .details_rBox .details_center {
+          float: left;
+          width: 600px;
+          height: 600px;
+          border: 3px solid #eee;
+          margin-right: 20px; }
+          section .section .details_down .details_rBox .details_center #showImg {
+            width: 600px;
+            height: 600px; }
+          section .section .details_down .details_rBox .details_center .details_rBox_bottom p {
+            display: flex;
+            justify-content: center; }
+            section .section .details_down .details_rBox .details_center .details_rBox_bottom p span {
+              margin: 20px 10px;
+              text-align: center;
+              display: inline-block;
+              width: 115px;
+              height: 35px;
+              color: #0d0d0d;
+              line-height: 35px;
+              background: #e8e8e8;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer; }
+              section .section .details_down .details_rBox .details_center .details_rBox_bottom p span .enjoy {
+                margin-left: 10px;
+                display: inline-block;
+                width: 20px;
+                height: 14px;
+                background: url(../img/dtl-buy.png);
+                background-position: 1px 15px; }
+        section .section .details_down .details_rBox .details_right {
+          float: left;
+          width: 444px; }
+          section .section .details_down .details_rBox .details_right h1 {
+            font-weight: 100; }
+            section .section .details_down .details_rBox .details_right h1 b {
+              font-size: 24px;
+              color: #000; }
+            section .section .details_down .details_rBox .details_right h1 .spanBox {
+              font-size: 14px;
+              color: #666464;
+              float: right;
+              margin-top: 12px; }
+          section .section .details_down .details_rBox .details_right p {
+            font-size: 14px;
+            color: #fa5400; }
+            section .section .details_down .details_rBox .details_right p i {
+              vertical-align: middle;
+              display: inline-block;
+              width: 58px;
+              margin-right: 3px;
+              height: 12px;
+              background: red;
+              background: url(../img/stars.png); }
+          section .section .details_down .details_rBox .details_right .pro-sales-list {
+            position: relative; }
+            section .section .details_down .details_rBox .details_right .pro-sales-list a img {
+              margin: 12px 0;
+              width: 444px;
+              height: 42px; }
+            section .section .details_down .details_rBox .details_right .pro-sales-list .price {
+              color: #c40000; }
+              section .section .details_down .details_rBox .details_right .pro-sales-list .price #ShopPrice {
+                margin-left: 3px;
+                font-size: 20px; }
+            section .section .details_down .details_rBox .details_right .pro-sales-list .priceBox {
+              margin: 8px 0 12px;
+              color: #999; }
+              section .section .details_down .details_rBox .details_right .pro-sales-list .priceBox #tag {
+                margin-right: 12px; }
+            section .section .details_down .details_rBox .details_right .pro-sales-list .favor {
+              position: absolute;
+              right: 0;
+              top: 94px;
+              display: block;
+              width: 112px;
+              height: 24px;
+              background: url(../img/coupons-btn-pc.png); }
+            section .section .details_down .details_rBox .details_right .pro-sales-list .pro-coupons-box {
+              width: 260px;
+              padding: 10px 10px 0 0px;
+              height: 262px;
+              border: 1px solid #dddddd;
+              position: absolute;
+              right: 0;
+              z-index: 1;
+              background: #c40000;
+              display: none; }
+              section .section .details_down .details_rBox .details_right .pro-sales-list .pro-coupons-box ul {
+                margin-left: 10px;
+                width: 260px; }
+                section .section .details_down .details_rBox .details_right .pro-sales-list .pro-coupons-box ul li {
+                  width: 250px;
+                  height: 60px;
+                  padding-top: 10px;
+                  margin-bottom: 10px;
+                  background: url(../img/coupons-bg-02.png);
+                  cursor: pointer; }
+                  section .section .details_down .details_rBox .details_right .pro-sales-list .pro-coupons-box ul li span {
+                    font-weight: 800;
+                    font-size: 36px;
+                    color: white;
+                    margin-left: 20px; }
+                  section .section .details_down .details_rBox .details_right .pro-sales-list .pro-coupons-box ul li b {
+                    color: #035c5d;
+                    font-size: 14px;
+                    margin-left: 16px; }
+              section .section .details_down .details_rBox .details_right .pro-sales-list .pro-coupons-box p {
+                width: 270px;
+                height: 30px;
+                color: #000;
+                font-size: 14px;
+                text-align: center;
+                line-height: 30px;
+                background: #eeeeee; }
+                section .section .details_down .details_rBox .details_right .pro-sales-list .pro-coupons-box p .success {
+                  width: 50px;
+                  text-align: center;
+                  height: 30px;
+                  cursor: pointer; }
+                  section .section .details_down .details_rBox .details_right .pro-sales-list .pro-coupons-box p .success .x {
+                    display: inline-block;
+                    width: 14px;
+                    line-height: 14px;
+                    height: 14px;
+                    color: #fff;
+                    margin-left: 2px;
+                    border-radius: 50%;
+                    background: #999999; }
+            section .section .details_down .details_rBox .details_right .pro-sales-list .pro-alert {
+              width: 444px;
+              height: 90px;
+              background: #eeeeee;
+              position: relative; }
+              section .section .details_down .details_rBox .details_right .pro-sales-list .pro-alert a {
+                display: inline-block;
+                margin-top: 35px;
+                margin-left: 20px;
+                color: #c40000; }
+              section .section .details_down .details_rBox .details_right .pro-sales-list .pro-alert .onsale {
+                position: absolute;
+                left: 13px;
+                top: 6px; }
+          section .section .details_down .details_rBox .details_right #color {
+            color: #666464;
+            width: 444px;
+            height: 40px;
+            line-height: 40px; }
+          section .section .details_down .details_rBox .details_right .colorBox {
+            width: 444px;
+            overflow: hidden; }
+            section .section .details_down .details_rBox .details_right .colorBox li {
+              width: 60px;
+              height: 60px;
+              float: left;
+              margin-right: 5px;
+              margin-bottom: 5px; }
+              section .section .details_down .details_rBox .details_right .colorBox li img {
+                width: 58px;
+                height: 58px;
+                border: 1px solid #666464; }
+          section .section .details_down .details_rBox .details_right #sizebox1 {
+            color: #666464;
+            width: 444px;
+            height: 40px;
+            line-height: 40px; }
+            section .section .details_down .details_rBox .details_right #sizebox1 .minbox {
+              display: inline-block;
+              width: 140px;
+              height: 40px; }
+            section .section .details_down .details_rBox .details_right #sizebox1 .biao {
+              color: #666464; }
+          section .section .details_down .details_rBox .details_right .sizeBox {
+            overflow: hidden; }
+            section .section .details_down .details_rBox .details_right .sizeBox li {
+              float: left;
+              margin-right: 5px;
+              margin-bottom: 5px;
+              line-height: 30px;
+              text-align: center;
+              width: 40px;
+              height: 28px;
+              border: 1px solid #666464; }
+          section .section .details_down .details_rBox .details_right .sumboX {
+            margin-top: 30px;
+            width: 444px;
+            overflow: hidden; }
+            section .section .details_down .details_rBox .details_right .sumboX .amount-boX {
+              width: 73px;
+              height: 40px;
+              float: left;
+              padding: 0 20px;
+              line-height: 40px;
+              border: 1px solid #666464;
+              position: relative; }
+              section .section .details_down .details_rBox .details_right .sumboX .amount-boX .numbox {
+                width: 14px;
+                height: 10px;
+                right: 12px;
+                background: red;
+                position: absolute;
+                cursor: pointer; }
+              section .section .details_down .details_rBox .details_right .sumboX .amount-boX .addNum {
+                top: 4px;
+                position: absolute;
+                background: url(../img/pro_top.png); }
+              section .section .details_down .details_rBox .details_right .sumboX .amount-boX .addReduce {
+                bottom: 4px;
+                position: absolute;
+                background: url(../img/pro_bottom.png); }
+            section .section .details_down .details_rBox .details_right .sumboX .buttonboX {
+              float: left; }
+              section .section .details_down .details_rBox .details_right .sumboX .buttonboX .butt {
+                width: 152px;
+                height: 42px;
+                text-align: center;
+                line-height: 42px;
+                color: #fff;
+                border-radius: 3px;
+                cursor: pointer;
+                float: left; }
+              section .section .details_down .details_rBox .details_right .sumboX .buttonboX .but_car {
+                margin: 0 10px;
+                background: #000; }
+              section .section .details_down .details_rBox .details_right .sumboX .buttonboX .but_buy {
+                background: #dd0000; }
+          section .section .details_down .details_rBox .details_right .pro_text {
+            color: #b1b1b1;
+            width: 444px; }
+            section .section .details_down .details_rBox .details_right .pro_text h3 {
+              color: #515151;
+              line-height: 32px; }
+            section .section .details_down .details_rBox .details_right .pro_text .dlBox {
+              color: #b1b1b1; }
+            section .section .details_down .details_rBox .details_right .pro_text .sm {
+              margin-right: 20px; }
+    section .section .deta_bottom {
+      width: 775px;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 40px;
+      overflow: hidden; }
+      section .section .deta_bottom .tab {
+        width: 775px;
+        height: 102px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto; }
+        section .section .deta_bottom .tab .tabBtn {
+          float: left;
+          width: 155px;
+          height: 43px;
+          text-align: center;
+          line-height: 43px;
+          border-radius: 2px;
+          font-size: 16px;
+          color: white;
+          background: #000;
+          position: relative; }
+          section .section .deta_bottom .tab .tabBtn em {
+            width: 0px;
+            height: 0px;
+            border: 16px solid transparent;
+            border-top-color: #b5b5b5;
+            position: absolute;
+            bottom: -32px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            display: none; }
+        section .section .deta_bottom .tab .tab_one {
+          margin-right: 24px;
+          background: #b5b5b5; }
+          section .section .deta_bottom .tab .tab_one em {
+            display: block; }
+        section .section .deta_bottom .tab .tab_two em {
+          display: none; }
+      section .section .deta_bottom .tabOneBox {
+        width: 775px; }
+        section .section .deta_bottom .tabOneBox img {
+          width: 775px;
+          height: 775px;
+          margin: 10px 0; }
+      section .section .deta_bottom .tabTwoBox {
+        width: 775px;
+        height: 100px;
+        margin-top: 10px;
+        background: #f5f7f6;
+        display: none; }
+
+#publicBottomBox {
+  margin-top: 50px; }
+
+/*# sourceMappingURL=detail.css.map */

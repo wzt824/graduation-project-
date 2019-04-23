@@ -1,0 +1,354 @@
+body, p, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, td, input, select, option, textarea {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.zShowBox {
+  width: 100%;
+  background: #f3f3f3;
+  overflow: hidden; }
+  .zShowBox .zshow {
+    width: 1190px;
+    padding-top: 30px;
+    margin: 0 auto; }
+    .zShowBox .zshow ul .item {
+      float: left;
+      position: relative;
+      text-align: center;
+      margin-bottom: 30px;
+      overflow: hidden; }
+      .zShowBox .zshow ul .item .showLayer {
+        background: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0; }
+        .zShowBox .zshow ul .item .showLayer .showMin {
+          position: relative;
+          width: 112px;
+          height: 42px;
+          overflow: hidden;
+          border: 1px solid #fff;
+          border-radius: 3px;
+          line-height: 42px; }
+          .zShowBox .zshow ul .item .showLayer .showMin a {
+            color: white;
+            font-weight: 600;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 824; }
+          .zShowBox .zshow ul .item .showLayer .showMin .showMinLayer {
+            width: 114px;
+            height: 44px;
+            border-radius: 3px;
+            background: #fff;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            left: -114px;
+            display: none; }
+      .zShowBox .zshow ul .item h3 {
+        margin-top: 14px;
+        font-size: 17px;
+        line-height: 38px; }
+        .zShowBox .zshow ul .item h3 a {
+          color: #333333; }
+      .zShowBox .zshow ul .item p {
+        font-size: 12px;
+        line-height: 26px;
+        margin-bottom: 12px; }
+        .zShowBox .zshow ul .item p a {
+          padding: 0 4px;
+          color: #333333; }
+    .zShowBox .zshow ul .item1 {
+      width: 580px;
+      margin-right: 15px; }
+      .zShowBox .zshow ul .item1 a img {
+        width: 580px;
+        height: 400px; }
+      .zShowBox .zshow ul .item1 .showLayer {
+        width: 580px;
+        height: 400px; }
+    .zShowBox .zshow ul .item2 {
+      width: 370px;
+      margin-right: 32px; }
+      .zShowBox .zshow ul .item2 a img {
+        width: 370px;
+        height: 385px; }
+      .zShowBox .zshow ul .item2 .showLayer {
+        width: 370px;
+        height: 385px; }
+    .zShowBox .zshow ul .item2:last-child {
+      margin-right: 0; }
+
+.slideshowBox {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 50px; }
+  .slideshowBox .slideshow {
+    width: 1190px;
+    margin: 0 auto;
+    text-align: center; }
+    .slideshowBox .slideshow .slideshowUp {
+      width: 1190px;
+      margin: 35px 0 26px 0; }
+      .slideshowBox .slideshow .slideshowUp h3 {
+        font-size: 24px;
+        font-weight: 100;
+        line-height: 46px; }
+        .slideshowBox .slideshow .slideshowUp h3 a {
+          color: #333333; }
+      .slideshowBox .slideshow .slideshowUp h1 {
+        font-size: 30px;
+        line-height: 64px; }
+        .slideshowBox .slideshow .slideshowUp h1 a {
+          color: #333333; }
+    .slideshowBox .slideshow .slideshowDown #slideshowDownLeft {
+      width: 583px;
+      height: 558px;
+      float: left;
+      margin-right: 24px;
+      cursor: pointer; }
+      .slideshowBox .slideshow .slideshowDown #slideshowDownLeft #conceal {
+        opacity: 0;
+        transition: all 1s; }
+    .slideshowBox .slideshow .slideshowDown #slideshowDownLeft:hover #conceal {
+      opacity: 1;
+      transition: all 1s; }
+    .slideshowBox .slideshow .slideshowDown #slideshowDownRight {
+      width: 583px;
+      height: 558px;
+      float: left;
+      cursor: pointer; }
+      .slideshowBox .slideshow .slideshowDown #slideshowDownRight #conceal {
+        opacity: 0;
+        transition: all 1s; }
+    .slideshowBox .slideshow .slideshowDown #slideshowDownRight:hover #conceal {
+      opacity: 1;
+      transition: all 1s; }
+  .slideshowBox #contants {
+    width: 583px;
+    height: 137px;
+    padding-top: 15px;
+    text-align: center; }
+    .slideshowBox #contants h3 {
+      font-size: 26px;
+      line-height: 42px;
+      color: #000; }
+    .slideshowBox #contants p {
+      font-size: 13px;
+      line-height: 28px; }
+    .slideshowBox #contants .showMin {
+      position: relative;
+      width: 112px;
+      height: 42px;
+      border: 1px solid #000;
+      border-radius: 3px;
+      line-height: 42px;
+      margin-left: 40%;
+      margin-top: 18px; }
+      .slideshowBox #contants .showMin a {
+        color: #000;
+        font-weight: 600;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 1024; }
+      .slideshowBox #contants .showMin .showMinLayer {
+        width: 114px;
+        height: 44px;
+        border-radius: 3px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        z-index: 925;
+        left: 0;
+        display: none; }
+    .slideshowBox #contants .showMin:hover a {
+      color: white;
+      transition: all 1.2s; }
+    .slideshowBox #contants .showMin:hover .showMinLayer {
+      display: block;
+      background: black;
+      transition: all 4s; }
+
+.productListBox {
+  width: 100%;
+  font-size: 12px;
+  color: #000; }
+  .productListBox .productList {
+    width: 1184px;
+    padding-left: 6PX;
+    margin: 0 auto;
+    text-align: center; }
+    .productListBox .productList .proLis {
+      width: 1190px;
+      padding-top: 20px;
+      padding-left: 6PX;
+      padding-bottom: 70px;
+      overflow: hidden; }
+      .productListBox .productList .proLis li {
+        position: relative;
+        margin-right: 8px;
+        margin-bottom: 15px;
+        height: 350px;
+        width: 289px;
+        float: left; }
+        .productListBox .productList .proLis li .ulLiBox {
+          background: #fff;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 288px;
+          border: 2px #fff solid; }
+          .productListBox .productList .proLis li .ulLiBox .imgBox {
+            display: block;
+            width: 288px;
+            height: 288px; }
+            .productListBox .productList .proLis li .ulLiBox .imgBox img {
+              width: 288px;
+              height: 288px; }
+          .productListBox .productList .proLis li .ulLiBox .minimgBox {
+            width: 288px;
+            height: 0px;
+            overflow: hidden;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out; }
+            .productListBox .productList .proLis li .ulLiBox .minimgBox .minleft {
+              float: left; }
+            .productListBox .productList .proLis li .ulLiBox .minimgBox .minbox {
+              background: #fff;
+              height: 32px;
+              width: 214px;
+              float: left;
+              overflow: hidden;
+              margin: 0 10px;
+              position: relative;
+              display: flex;
+              justify-content: center; }
+              .productListBox .productList .proLis li .ulLiBox .minimgBox .minbox .imgUls {
+                height: 32px;
+                position: absolute;
+                left: 0px;
+                display: flex;
+                justify-content: center; }
+                .productListBox .productList .proLis li .ulLiBox .minimgBox .minbox .imgUls li {
+                  width: 32px;
+                  height: 32px;
+                  float: left;
+                  margin-right: 4px;
+                  margin-bottom: 0; }
+                  .productListBox .productList .proLis li .ulLiBox .minimgBox .minbox .imgUls li a img {
+                    width: 32px;
+                    height: 32px; }
+            .productListBox .productList .proLis li .ulLiBox .minimgBox .minright {
+              float: left; }
+          .productListBox .productList .proLis li .ulLiBox .produ_info {
+            font-size: 12px; }
+          .productListBox .productList .proLis li .ulLiBox p {
+            font-size: 16px;
+            color: #666666; }
+          .productListBox .productList .proLis li .ulLiBox .pro_buy {
+            width: 288px;
+            height: 30px;
+            height: 0;
+            overflow: hidden;
+            margin: 8px 0 16px 0; }
+            .productListBox .productList .proLis li .ulLiBox .pro_buy .buy_now {
+              position: relative;
+              width: 120px;
+              height: 30px;
+              color: #000;
+              margin: 0 auto;
+              border: 1px solid #ddd;
+              transition: all 0.3s;
+              overflow: hidden; }
+              .productListBox .productList .proLis li .ulLiBox .pro_buy .buy_now .textChange {
+                display: block;
+                width: 120px;
+                height: 30px;
+                color: #000;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                text-align: center;
+                line-height: 30px; }
+              .productListBox .productList .proLis li .ulLiBox .pro_buy .buy_now .ProshowMinLayer {
+                width: 120px;
+                height: 30px;
+                background: red;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+                left: -120px;
+                display: none; }
+    .productListBox .productList #loadMore {
+      width: 1190px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .productListBox .productList #loadMore .pro_buy_load {
+        width: 300px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        background: #fff;
+        border: 1px solid #dbdbdb;
+        position: relative;
+        overflow: hidden; }
+        .productListBox .productList #loadMore .pro_buy_load .textChange_load {
+          width: 300px;
+          height: 40px;
+          line-height: 40px;
+          color: #dbdbdb;
+          font-size: 17px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0px;
+          margin: auto 0; }
+          .productListBox .productList #loadMore .pro_buy_load .textChange_load span {
+            line-height: 40px;
+            margin-left: 16px;
+            font-size: 12px; }
+        .productListBox .productList #loadMore .pro_buy_load .ProshowMinLayer_load {
+          width: 300px;
+          height: 40px;
+          background: red;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -301px;
+          margin: auto 0;
+          display: none; }
+
+/*# sourceMappingURL=index.css.map */

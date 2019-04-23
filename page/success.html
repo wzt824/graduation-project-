@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结算</title>
+    <link rel="shortcut icon" href="img/bitbug_favicon.ico" />
+    <link rel="stylesheet" href="css/clearing.css">
+    <link rel="stylesheet" href="css/success.css">
+</head>
+<body>
+    <header>
+        <div id="head">
+            <div id="h_left">
+                <a class="logo" href="javascript:;">你好，欢迎来到卓越官方商城！</a>
+                <div id="welcomeUesr">欢迎回家，
+                    <span id="welcome"></span> &nbsp; &nbsp; &nbsp;|
+                    <a href="login.html" id="logout">注销</a>
+                </div>
+                <p id="logo_box">
+                    <a href="login.html">请登录</a>
+                    <a href="reg.html">免费注册</a>
+                </p>
+            </div>
+            <div id="h_right">
+                <a href="javascript:;">我的卓越 </a>|
+                <a href="index.html">品牌官网 </a>|
+                <a href="javascript:;">关于我们 </a>|
+                <a href="javascript:;" id="sjsc"><i class="icon_phone"></i>手机商城
+                    <img src="img/index_iqr.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="section">
+            <div class="sec_left"><a href="index.html"><img src="img/cn_logo.png" alt="" style="width: 170px;height: 70px"></a></div>
+            <div class="sec_right">
+                <a href="javascript:;"><img src="img/cartnew_flow.png" alt=""></a>
+                <div class="dian"><img src="img/cart_flow_black.gif" alt=""></div>
+                <div class="dian clearing"><img src="img/cart_flow_black.gif" alt=""></div>
+                <div class="dian success"><img src="img/cart_flow_black.gif" alt=""></div>
+                <p>
+                    <a href="javascript:;">我的购物车</a>
+                    <a href="javascript:;">填写核对订单信息</a>
+                    <a href="javascript:;">成功提交订单</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="contentBox">
+        <p>系统提示</p>
+        <div class="successMinBox">
+            <div class="minLeft">
+                <img src="./img/pay-success.png" alt="">
+            </div>
+            <div class="minRight">
+                <h2>支付成功</h2>
+                <a href="index.html">返回首页，继续购买</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- 固定部分 -->
+    <div id="public_fixed">
+        <a class="btn qq_reg" href="javascript:;"></a>
+        <div class="btn btn_phone">
+            <div class="_phone">400-858-2020</div>
+        </div>
+        <div class="btn btn_top"></div>
+    </div>
+    <div id="bottomBox">
+        <!-- 尾部部分 -->
+    </div>
+</body>
+</html>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/cookie.js"></script>、
+<script>
+    $(function () {
+        var ifUserPhone = getCookie("userphone");
+        if(ifUserPhone == null){
+            alert("亲，请登录！");
+            location.href="login.html"
+        }
+        $("#publicTopBox").load("publicTop.html");
+        $("#bottomBox").load("publicBottom.html");
+
+        //获取cookie（上一个页面传来的商品总值）
+        console.log(getCookie("proMoney"))
+    })
+</script>

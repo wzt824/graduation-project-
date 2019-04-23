@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script>
+    $(function () {
+
+        //数字形式
+        var arr = [
+            {proId:258,num:"haha1"},
+            {proId:158,num:"haha1"},
+            {proId:358,num:"haha1"},
+            {proId:458,num:"haha2"},
+            {proId:758,num:"haha2"},
+            {proId:958,num:"haha2"}
+        ];
+        //字符串形式
+        var arr1 = [
+            {proId:"123",num:"haha1"},
+            {proId:"234",num:"haha1"},
+            {proId:"345",num:"haha1"},
+            {proId:"456",num:"haha2"},
+            {proId:"567",num:"haha2"},
+            {proId:"678",num:"haha2"}
+        ];
+        var sum = 0;//求和
+        for (let i=0;i<arr1.length;i++){
+            //求num=“haha1”的值
+            //parseInt()  parseFloat()
+            if(arr[i].num === "haha1"){
+                sum += parseInt(arr1[i].proId);
+            }
+
+        }
+        console.log(sum)
+    })
+</script>
