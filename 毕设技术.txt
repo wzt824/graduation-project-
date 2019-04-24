@@ -1,0 +1,13 @@
+一、商城页面：
+      主要技术：html5，css3，sass编译，原生js，jquery，ajax（XMLHttpRequest 是ajax的核心对象，完成异步操作），cookie，php等。
+      实现功能：登录注册，轮播图，放大镜，搜索，加入购物车，正则判断，返回顶部以及其他的一些小动画/特效等。
+
+二、管理端
+      主要技术：通过vue脚手架搭建项目，vue-router，axios，elementUI，php，反向代理实现跨越等。
+      实现功能：登录注销，各模块的增删改查相关操作，路由嵌套，分页、查询等。
+
+三、数据库mysql
+      SQL的增删改查基本操作命令，以及创建联合主键
+     （eg：alter table 成绩表 add constraint Pk_学号_课程号 primary key(学号,课程号)）
+
+四、服务端语言PHP

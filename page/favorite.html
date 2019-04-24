@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>【卓越】——我的收藏</title>
+    <link rel="shortcut icon" href="img/bitbug_favicon.ico" />
+    <link rel="stylesheet" href="css/favorite.css">
+</head>
+<body>
+<header>
+    <div id="publicTopBox">
+        <!-- 放头部公共部分 -->
+    </div>
+</header>
+<div class="contant">
+    <div class="cont">
+        <h1>我的收藏</h1>
+        <div class="empotyCar">
+            <img src="img/cart-empty-bg.png" alt="">
+            <span>暂无收藏商品，您可以<a href="index.html">马上去挑选商品</a>或<a href="cart.html">查看我的购物车</a></span>
+        </div>
+    </div>
+</div>
+<div class="shoppingCar">
+    <div class="shopCar">
+        <div class="car_tit">
+            <h1>我的收藏</h1>
+            <ul>
+                <li class="lis1">
+                    <input type="checkbox" id="selectAllF">
+                </li>
+                <li class="lis2">商品编号</li>
+                <li class="lis3">商品图片</li>
+                <li class="lis4">商品名称</li>
+                <li class="lis5">商品颜色</li>
+                <li class="lis6">商品尺码</li>
+                <li class="lis8">删除</li>
+            </ul>
+        </div>
+        <div class="car_product_our_F">
+            <!-- 动态创建 -->
+        </div>
+        <div class="car_account">
+            <div class="car_two">
+                <div class="t_left">
+                    <span class="t_empty">清空收藏</span>
+                </div>
+            </div>
+        </div>
+        <div class="car_foot">
+            <div class="goBox">
+                <a href="index.html" class="goShop">继续收藏</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="bottomBox">
+    <!-- 尾部部分 -->
+</div>
+</body>
+</html>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/cookie.js"></script>
+<script src="js/favorite.js"></script>
+<script>
+    $(function(){
+        $("#publicTopBox").load("publicTop.html");
+        var ifUserPhone = getCookie("userphone");
+        if(ifUserPhone == null){
+            alert("亲，请登录！");
+            location.href="login.html"
+        }
+        $("#bottomBox").load("publicBottom.html");
+
+        // $(".gobuy").click(function () {
+        //     var getMoney = $(".t_num").html();
+        //     setCookie("proMoney",getMoney,1);
+        //     location.href="clearing.html";
+        // });
+    });
+</script>
+

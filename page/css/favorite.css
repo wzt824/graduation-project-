@@ -1,0 +1,221 @@
+body, p, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, td, input, select, option, textarea {
+    margin: 0;
+    padding: 0; }
+
+a {
+    text-decoration: none; }
+
+li {
+    list-style: none; }
+
+header {
+    width: 100%; }
+header nav .nav ul li {
+    font-size: 14px;
+    padding: 0 11px;
+}
+.contant {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 30px;
+    display: none; }
+.contant .cont {
+    width: 1050px;
+    height: 137px;
+    margin: 30px auto; }
+.contant .cont h1 {
+    margin: 20px 0;
+    font-size: 30px;
+    line-height: 37px; }
+.contant .cont .empotyCar {
+    width: 1048px;
+    height: 98px;
+    background: #f3f3f3;
+    border: 1px solid #dddddd;
+    font-size: 12px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+.contant .cont .empotyCar span {
+    margin-left: 20px; }
+.contant .cont .empotyCar a {
+    color: #005ea7; }
+
+.shoppingCar {
+    width: 100%; }
+.shoppingCar .shopCar {
+    width: 1050px;
+    overflow: hidden;
+    text-align: center;
+    margin: 60px auto;
+    font-size: 12px; }
+.shoppingCar .shopCar .lis1 {
+    width: 39px; }
+.shoppingCar .shopCar .lis1 input {
+    cursor: pointer; }
+.shoppingCar .shopCar .lis2 {
+    width: 128px; }
+.shoppingCar .shopCar .lis3 {
+    width: 85px; }
+.shoppingCar .shopCar .lis4 {
+    width: 282px; }
+.shoppingCar .shopCar .lis4 h3 {
+    width: 270px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 100;
+    font-size: 14px;
+    cursor: pointer; }
+.shoppingCar .shopCar .lis5 {
+    width: 210px; }
+.shoppingCar .shopCar .lis5 p {
+    width: 270px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    cursor: pointer; }
+.shoppingCar .shopCar .lis5 p .color {
+    width: 115px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px; }
+.shoppingCar .shopCar .lis6 {
+    width: 222px;
+    text-align: center; }
+.shoppingCar .shopCar .lis8 {
+    text-align: center;
+    width: 43px; }
+.shoppingCar .shopCar .lis8 .dellF {
+    cursor: pointer; }
+
+.shoppingCar .shopCar .car_uls .lis1 {
+    width: 39px; }
+.shoppingCar .shopCar .car_uls .lis1 input {
+    cursor: pointer; }
+.shoppingCar .shopCar .car_uls .lis2 {
+    width: 102px; }
+.shoppingCar .shopCar .car_uls .lis3 {
+    width: 85px; }
+.shoppingCar .shopCar .car_uls .lis4 {
+    width: 300px; }
+.shoppingCar .shopCar .car_uls .lis4 h3 {
+    width: 270px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 100;
+    font-size: 14px;
+    cursor: pointer; }
+.shoppingCar .shopCar .car_uls .lis5 {
+    width: 180px; }
+.shoppingCar .shopCar .car_uls .lis5 p {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    cursor: pointer; }
+.shoppingCar .shopCar .car_uls .lis5 p .color {
+    width: 115px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px; }
+.shoppingCar .shopCar .car_uls .lis6 {
+    width: 187px;
+    text-align: center; }
+.shoppingCar .shopCar .car_uls .lis8 {
+    text-align: center;
+    width: 52px; }
+.shoppingCar .shopCar .car_uls .lis8 .dellF {
+    cursor: pointer; }
+
+
+
+.shoppingCar .shopCar .car_tit h1 {
+    font-size: 30px;
+    text-align: left;
+    margin: 5px 0 20px;
+    line-height: 37px; }
+.shoppingCar .shopCar .car_tit ul {
+    width: 1016px;
+    height: 46px;
+    line-height: 46px;
+    background: #f5f5f5;
+    padding: 0 17px; }
+.shoppingCar .shopCar .car_tit ul li {
+    float: left; }
+.shoppingCar .shopCar .car_product_our_F .car_uls {
+    width: 1016px;
+    height: 80px;
+    padding: 0 17px;
+    display: flex;
+    color: #333333;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc; }
+.shoppingCar .shopCar .car_product_our_F .car_uls img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer; }
+.shoppingCar .shopCar .car_sale {
+    width: 1050px;
+    border-bottom: 3px solid #f1f1f1; }
+.shoppingCar .shopCar .car_sale h1 {
+    font-size: 20px;
+    line-height: 37px; }
+.shoppingCar .shopCar .car_account {
+    width: 1050px;
+    height: 98px;
+    margin-top: 20px;
+    border-bottom: 1px solid #dddddd;
+    font-size: 14px; }
+.shoppingCar .shopCar .car_account .car_up {
+    width: 1050px;
+    height: 45px; }
+.shoppingCar .shopCar .car_account .car_up .car_one {
+    float: right;
+    margin-top: 8px;
+    line-height: 37px; }
+.shoppingCar .shopCar .car_account .car_up .bao {
+    color: #000;
+    margin-right: 54px; }
+.shoppingCar .shopCar .car_account .car_two {
+    line-height: 37px; }
+.shoppingCar .shopCar .car_account .car_two .t_left {
+    color: #005ea7;
+    float: left; }
+.shoppingCar .shopCar .car_account .car_two .t_left .t_empty {
+    margin-left: 20px;
+    cursor: pointer; }
+.shoppingCar .shopCar .car_account .car_two .t_right {
+    float: right; }
+.shoppingCar .shopCar .car_account .car_two .t_right .t_numBox {
+    color: #dd0000;
+    font-size: 20px;
+    margin-left: 10px; }
+.shoppingCar .shopCar .car_foot {
+    width: 1050px;
+    height: 68px;
+    line-height: 68px;
+    background: #f5f5f5; }
+.shoppingCar .shopCar .car_foot .goBox {
+    float: right; }
+.shoppingCar .shopCar .car_foot .goBox .goShop {
+    margin-right: 20px;
+    padding: 13px 42px;
+    background: white;
+    border: 1px dashed #cccccc;
+    cursor: pointer; }
+.shoppingCar .shopCar .car_foot .goBox .gobuy {
+    padding: 14px 43px;
+    background: #dd0000;
+    margin-left: 14px;
+    margin-right: 10px;
+    color: #fff;
+    cursor: pointer; }
+

@@ -268,7 +268,13 @@ li {
             .productListBox .productList .proLis li .ulLiBox .minimgBox .minright {
               float: left; }
           .productListBox .productList .proLis li .ulLiBox .produ_info {
-            font-size: 12px; }
+            width: 80%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0 auto;
+            font-size: 12px;
+          }
           .productListBox .productList .proLis li .ulLiBox p {
             font-size: 16px;
             color: #666666; }

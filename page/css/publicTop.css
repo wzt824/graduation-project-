@@ -8,6 +8,9 @@ html, body {
 a {
   text-decoration: none;
   color: #333333; }
+li{
+  list-style: none;
+}
 
 header {
   width: 100%;
@@ -418,15 +421,19 @@ nav {
       background: #e6e6e6; }
       .fixedBox .fixedRight .hideFix:nth-child(2) h3 {
         font-size: 12px;
+        width: 100%;
         color: #808080;
-        line-height: 36px; }
+        line-height: 36px;
+        overflow: hidden;
+      }
         .fixedBox .fixedRight .hideFix:nth-child(2) h3 input {
           margin: 8px;
           vertical-align: middle; }
         .fixedBox .fixedRight .hideFix:nth-child(2) h3 a {
-          margin-right: 18px;
           color: #808080;
-          float: right; }
+          float: right;
+          margin-right: 20px;
+          display: block;}
       .fixedBox .fixedRight .hideFix:nth-child(2) .hideBox {
         text-align: center;
         line-height: 26px;
@@ -449,7 +456,7 @@ nav {
         margin-left: 12px;
         margin-right: 18px;
         float: left;
-        width: 25px;
+        width: 17px;
         height: 35px;
         cursor: pointer;
         background-image: url(../img/service-icon.png), url(../img/service-icon.png);
@@ -524,5 +531,87 @@ nav {
           vertical-align: middle; }
         .fixedBox .fixedRight .hideFix:nth-child(4) .jiaMore img {
           vertical-align: middle; }
-
+.fixedBox .fixedRight .hideFix .shopCar{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+.fixedBox .fixedRight .hideFix .shopCar ul{
+  width: 100%;
+  overflow: hidden;
+  margin: 25px 0;
+}
+.fixedBox .fixedRight .hideFix .shopCar ul li{
+  float: left;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.fixedBox .fixedRight .hideFix .shopCar ul .lis1{
+  width: 20px;
+}
+.fixedBox .fixedRight .hideFix .shopCar ul .lis2{
+  width: 50px;
+  word-wrap: break-word;
+}
+.fixedBox .fixedRight .hideFix .shopCar ul .lis3{
+  width: 50px;
+}
+.fixedBox .fixedRight .hideFix .shopCar ul .lis3 img{
+  width: 30px;
+  height: 30px;
+}
+.fixedBox .fixedRight .hideFix .shopCar ul .lis4{
+  width: 50px;
+}
+.fixedBox .fixedRight .hideFix .shopCar ul .lis5{
+  width: 60px;
+  word-wrap: break-word;
+}
+.fixedBox .fixedRight .hideFix .shopCar ul .lis6{
+  width: 30px;
+  word-wrap: break-word;
+}
+.cartIndex{
+  margin-top: 35px;
+}
+.fixedBox .fixedRight .hideFix #delAllCart{
+  margin: 0 10px 0 60px;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: black;
+  background: #f7f7f7;
+  border: 1px dashed #eeeeee;
+}
+.fixedBox .fixedRight .hideFix #shopCart{
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  padding: 5px 20px;
+  color: white;
+  background: #ff0000;
+}
+.fixedBox .fixedRight .hideFix #delAllCart01{
+  margin: 0 10px 0 60px;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: black;
+  background: #f7f7f7;
+  border: 1px dashed #eeeeee;
+}
+.fixedBox .fixedRight .hideFix #shopCart01{
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  padding: 5px 20px;
+  color: white;
+  background: #ff0000;
+}
 /*# sourceMappingURL=publicTop.css.map */

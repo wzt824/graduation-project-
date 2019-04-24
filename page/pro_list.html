@@ -308,7 +308,8 @@
                                 <a href='javascript:;' class='imgBox pros'>\
                                     <img class='bigloveimg' src='"+data[i].goodsImg+"' alt=''>\
                                     <span class='proId' style='display:none;'>"+data[i].goodsId+"</span>\
-                                    </a>\
+                                    <span class='proNum' style='display:none;'>"+data[i].beiyong2+"</span>\
+                                </a>\
                                 <div class='minimgBox pros'>\
                                         <span class='proId' style='display:none;'>"+data[i].goodsId+"</span>\
                                         <a class='minleft' href='javascript:;'><img src='img/feel3.png' alt=''></a>\
@@ -441,6 +442,33 @@
                 }
             });
             proLists();
+
+            //点击购买
+             $(".nuw_buy").click(function () {
+                 let ids = $(".proId").html() //ID
+                 let counts = 1; //数量
+                 let colors = $(".showColor").html(); //颜色
+                 let sizes = $(".showSize").html(); //尺码
+                 let prices = $(".prode_price").html() //原价
+                 let pricesN = $(".proNum").html()  //折扣
+                 let pricesC = (prices*pricesN/100).toFixed(2) //出售价
+                 let names = $(".produ_info").html()// name
+                 let imgs = $(".bigloveimg").attr("src")// img
+
+                 let xhr = new XMLHttpRequest();
+                 xhr.open("get","/anta/page/php/addShoppingCart.php?userPhone="+getCookie("userphone")+"&proImg="+imgs+"&proColor="+colors+"&proId="+ids+"&proCount="+counts+"&proSize="+sizes+"&proPriceNum="+prices+"&proPrice="+pricesC+"&proName="+names,true);
+                 xhr.onreadystatechange=function(){
+                     if(xhr.readyState==4&&xhr.status==200){
+                         let d = xhr.responseText;
+                         if(d==1){
+                             window.open("cart.html");
+                         }else if(d==0){
+                             alert('添加失败!');
+                         }
+                     }
+                 }
+                 xhr.send();
+             })
             }
         }
 
@@ -576,16 +604,6 @@ function proLists(){
     }
 }
 
-// $.ajax({
-//     type:"get",
-//     url:"php/addShoppingCart.php",
-//     async:true,
-//     data:null,
-//     success:function(){
-
-//     },
-//     dataType:"json"
-// });
 
 
 

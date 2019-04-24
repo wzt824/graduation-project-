@@ -36,7 +36,7 @@ $.ajax({
                             <div class='details_rBox_bottom'>\
                                 <p>\
                                     <span>分享<i class='enjoy'></i></span>\
-                                    <span>收藏商品  +</span>\
+                                    <span class='addFavorite'>收藏商品  +</span>\
                                 </p>\
                             </div>  \
                         </div>\
@@ -180,26 +180,53 @@ $.ajax({
 
             detalis();
 
+            //加入收藏
+            $(".addFavorite").click(function () {
+                if(click1 == true && click2 == true){
+                    var proIds = $("#goodsid").html();
+                    //获取颜色
+                    let getColor = $("#getColor").html();
+                    //获取尺寸
+                    let getSizes = $("#getSize").html();
+                    //获取图片
+                    let getImg = $("#showImg").attr("src");
+
+                    let names = $("#proNames").html();
+
+                    let xhr = new XMLHttpRequest();
+                    xhr.open("get","/anta/page/php/addFavorite.php?userPhone="+getCookie("userphone")+"&proImg="+getImg+"&proColor="+getColor+"&proId="+proIds+"&proSize="+getSizes+"&proName="+names,true);
+                    xhr.onreadystatechange=function(){
+                        if(xhr.readyState==4&&xhr.status==200){
+                            let d = xhr.responseText;
+                            if(d==1){
+                                alert('添加收藏成功!');
+                            }else if(d==0){
+                                alert('添加收藏失败!');
+                            }
+                        }
+                    }
+                    xhr.send();
+
+                    $(".colorORsizeBox").css({"border":"1px solid transparent"})
+                }else{
+                    $(".colorORsizeBox").css({"border":"1px solid red"});
+                }
+            })
+
             //立即购买
             $(".but_buy").click(function(){
                 if(click1 == true && click2 == true){
                     var proIds = $(this).find(".proId").html();
-                    setCookie("proBuy",proIds,1);
                     //获取颜色
                     let getColor = $("#getColor").html();
-                    setCookie("proBuycolor",getColor,1);
                     //获取尺寸
                     let getSizes = $("#getSize").html();
-                    setCookie("proBuysize",getSizes,1);
                     //获取图片
                     let getImg = $("#showImg").attr("src");
-                    setCookie("proBuyimg",getImg,1);
                     //吊牌价
                     let tagValue = $("#tag").html();
-                    setCookie("proBuytagValue",tagValue,1);
                     //出售价
                     let ShopValue = $("#ShopPrice").html();
-                    setCookie("proBuyShopValue",ShopValue,1);
                     //电话号码
                     let pronums = $(".num")[0].innerHTML;
 
@@ -229,22 +256,16 @@ $.ajax({
             $(".but_car").click(function(){
                 if(click1 == true && click2 == true){
                     var proIds = $(this).find(".proId").html();
-                    setCookie("proBuy",proIds,1);
                     //获取颜色
                     let getColor = $("#getColor").html();
-                    setCookie("proBuycolor",getColor,1);
                     //获取尺寸
                     let getSizes = $("#getSize").html();
-                    setCookie("proBuysize",getSizes,1);
                     //获取图片
                     let getImg = $("#showImg").attr("src");
-                    setCookie("proBuyimg",getImg,1);
                     //吊牌价
                     let tagValue = $("#tag").html();
-                    setCookie("proBuytagValue",tagValue,1);
                     //出售价
                     let ShopValue = $("#ShopPrice").html();
-                    setCookie("proBuyShopValue",ShopValue,1);
                     //电话号码
                     let pronums = $(".num")[0].innerHTML;
                     let names = $("#proNames").html();
