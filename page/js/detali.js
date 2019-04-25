@@ -295,7 +295,7 @@ $.ajax({
     }
 
 },
-dataType:"json"
+    dataType:"json"
 });
 
 

@@ -3,6 +3,7 @@
 	header("Content-Type:text/html;charset=utf-8");
 	//1、接受客户端的数据（用户输入的数据）
 	$userPhone=$_GET['userPhone'];
+    $orderId=$_GET['orderId'];
     $addressName=$_GET['addressName'];
     $addressPhone=$_GET['addressPhone'];
     $address=$_GET['address'];
@@ -20,14 +21,14 @@
 	};
 
 	//3）、传输数据（过桥）
-	$result = mysql_query("select * from orderinfo where userPhone='$userPhone'",$conn);
+	$result = mysql_query("select * from orderinfo where userPhone='$userPhone' and orderId='$orderId'",$conn);
 	//3.1)先查找该商品是否在购物车中存在
 	if(mysql_num_rows($result)>0){
 		//如果存在，则使用update语句
-		$sqlstr = "UPDATE orderinfo set addressName = '$addressName',addressPhone ='$addressPhone',address = '$address',addressCode ='$addressCode',addressMode = '$addressMode',sumMoney ='$sumMoney' where userPhone='$userPhone'";
+		$sqlstr = "UPDATE orderinfo set addressName = '$addressName',addressPhone ='$addressPhone',address = '$address',addressCode ='$addressCode',addressMode = '$addressMode',sumMoney ='$sumMoney' where userPhone='$userPhone' and orderId='$orderId'";
 	}else{
 		//如果不存在，则使用insert语句
-		$sqlstr = "insert into orderinfo values('$userPhone','$addressName','$addressPhone','$address','$addressCode','$addressMode','$sumMoney')";
+		$sqlstr = "insert into orderinfo values('$userPhone','$orderId','$addressName','$addressPhone','$address','$addressCode','$addressMode','$sumMoney')";
 	}
 
 	$result=mysql_query($sqlstr,$conn);

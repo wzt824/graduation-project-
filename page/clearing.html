@@ -24,8 +24,8 @@
                 <a href="favorite.html">我的卓越 </a>|
                 <a href="index.html">品牌官网 </a>|
                 <a href="Our-index.html">关于我们 </a>|
-                <a href="javascript:;" id="sjsc"><i class="icon_phone"></i>手机商城
-                    <img src="img/index_iqr.jpg" alt="">
+                <a href="order.html" id="sjsc"><i class="icon_phone"></i>我的订单
+                    <!--<img src="img/index_iqr.jpg" alt="">-->
                 </a>
             </div>
         </div>
@@ -89,6 +89,7 @@
         </div>
         <div class="car_foot">
             <div class="goBox">
+                <!--<span id="orderId"></span>-->
                 <a href="javascript:;" class="gobuy" id="gobuy">结算</a>
             </div>
         </div>
@@ -140,13 +141,23 @@
         })
 
         $("#gobuy").click(function (){
+
+            let getstr = '';
+            for(let i=0;i<8;i++){
+                getstr += "0123456789abcdefghijkmnpqrstuvwxyzABCDEFGHIJKLMNPQRSTUVW"[parseInt(Math.random()*16)];
+            }
+
+            let orderId = getstr;
+
+            alert(orderId)
+
             let addname = $(".name").val();
             let addtel = $(".tel").val();
             let add_ress = $(".add_ress").val();
             let email = $(".email").val();
 
             let xhr = new XMLHttpRequest();
-            xhr.open("get","/anta/page/php/addOrder.php?userPhone="+getCookie('userphone')+"&addressName="+addname+"&addressPhone="+addtel+"&address="+add_ress+"&addressCode="+email+"&addressMode="+modeStr+"&sumMoney="+getCookie('proMoney'),true);
+            xhr.open("get","php/addOrder.php?userPhone="+getCookie('userphone')+"&orderId="+orderId+"&addressName="+addname+"&addressPhone="+addtel+"&address="+add_ress+"&addressCode="+email+"&addressMode="+modeStr+"&sumMoney="+getCookie('proMoney'),true);
             xhr.onreadystatechange=function(){
                 if(xhr.readyState==4&&xhr.status==200){
                     let d = xhr.responseText;

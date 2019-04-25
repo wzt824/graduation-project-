@@ -100,7 +100,6 @@ function bigs(){
                 if(confirm("亲，您确定要删除所选商品吗？")){
                     let that = this;
                     let id = $("#spanId").html();
-                    alert(id)
                     let xhr = new XMLHttpRequest();
                     xhr.open("get","/anta/page/php/delFavorite.php?userPhone="+getCookie("userphone")+"&proId="+id,true);
                     xhr.onreadystatechange=function(){

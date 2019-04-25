@@ -200,7 +200,7 @@ function big(){
                 if(confirm("亲，您确定要删除所选商品吗？")){
                     let that = this;
                     let id = $("#proIdCart").html();
-                    console.log(id)
+                    // console.log(id)
                     let xhr = new XMLHttpRequest();
                     xhr.open("get","/anta/page/php/delShoppingCart.php?userPhone="+getCookie("userphone")+"&proId="+id,true);
                     xhr.onreadystatechange=function(){

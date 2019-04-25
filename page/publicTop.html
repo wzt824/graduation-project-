@@ -25,8 +25,8 @@
             <div id="h_right">
                 <a href="favorite.html">我的卓越 </a>|
                 <a href="index.html"></i>品牌官网 </a>|
-                <a href="javascript:;" id="sjsc"><i class="icon_phone"></i>手机商城
-                    <img src="img/index_iqr.jpg" alt="">
+                <a href="order.html" id="sjsc"><i class="icon_phone"></i>我的订单
+                    <!--<img src="img/index_iqr.jpg" alt="">-->
                 </a>|
                 <a href="Our-index.html">关于我们 </a>|
                 <a href="javascript:;" id="indexCarts"><i class="icon_car"></i>购物车</a>
@@ -124,9 +124,9 @@
                         <div class="hi_left"><a href="javascript:;"><img src="img/11735505.jpg" alt=""></a></div>
                         <div class="hi_right">
                             <h3><a href="javascript:;">男子跑鞋</a></h3>
-                            <a href="javascript:;" title="男子跑鞋" class="productCookie">跑步鞋</a><a href="javascript:;" title="男子跑服" class="productCookie">跑步服</a>
+                            <a href="javascript:;" title="男子跑步鞋" class="productCookie">跑步鞋</a><a href="javascript:;" title="男子跑步服" class="productCookie">跑步服</a>
                             <h3><a href="javascript:;">女子跑鞋</a></h3>
-                            <a href="javascript:;" title="女子跑鞋" class="productCookie">跑步鞋</a><a href="javascript:;" title="女子跑服" class="productCookie">跑步服</a>
+                            <a href="javascript:;" title="女子跑步鞋" class="productCookie">跑步鞋</a><a href="javascript:;" title="女子跑步服" class="productCookie">跑步服</a>
                             <h3><a href="javascript:;">新品推荐</a></h3>
                             <a href="javascript:;" title="儿童跑步系列" class="productCookie">儿童跑步系列</a><a href="javascript:;" title="新品推荐" class="productCookie">新品跑鞋</a>
                             <h3><a href="javascript:;">优惠活动</a></h3>
@@ -243,7 +243,7 @@
                 </li>
                 <li>
                     <div class="left1">
-                        <div class="leftBox">最近浏览
+                        <div class="leftBox">我的订单
                             <div id="left_Sj"></div>
                         </div>
                     </div>
@@ -339,15 +339,35 @@
             <div class="hideFix">
                 <h2>
                     <a class="goback"></a>
-                    最近浏览
+                    我的订单
                 </h2>
-                <div class="liu">
-                    <span class="saw-total"><span class="saw-total-num">0</span> 件商品</span>
-                    <a href="javascript:;" class="saw-clean">清空</a>
-                </div>
-                <div class="jiaMore">
-                    <a href="javascript:;">加载更多</a>
-                    <img src="img/loading-1.gif" alt="">
+                <!--<div class="liu">-->
+                    <!--<span class="saw-total"><span class="saw-total-num">0</span> 件商品</span>-->
+                    <!--<a href="javascript:;" class="saw-clean">清空</a>-->
+                <!--</div>-->
+                <!--<div class="jiaMore">-->
+                    <!--<a href="javascript:;">加载更多</a>-->
+                    <!--<img src="img/loading-1.gif" alt="">-->
+                <!--</div>-->
+                <div class="shopCar" style="color: #fff;">
+                    <div class="car_tit">
+                        <ul>
+                            <li class="lis1">
+                                <input type="checkbox" id="selectAll02">
+                            </li>
+                            <li class="lis2">编号</li>
+                            <li class="lis3">收货人</li>
+                            <li class="lis4">地址</li>
+                            <li class="lis5">支付方式</li>
+                            <li class="lis6">金额</li>
+                        </ul>
+                    </div>
+                    <div class="car_product_O"><!-- 动态创建 --></div>
+                    <div class="cartIndex">
+                        <span id="delAllCart02">清空订单</span>
+                        <span id="shopCart02">更多订单</span>
+                    </div>
+
                 </div>
             </div>
             <div class="hideFix"></div>
@@ -362,6 +382,7 @@
 <script src="js/publicTop.js"></script>
 <script src="js/publicTopAjax.js"></script>
 <script src="js/publicTopAjaxF.js"></script>
+<script src="js/publicTopAjaxO.js"></script>
 <script src="js/cookie.js"></script>
 <script>
     $(function(){
@@ -440,6 +461,30 @@
         });
         $("#shopCart01").click(function () {
             window.open("favorite.html")
+        })
+        //清空订单
+        $("#delAllCart02").click(function(){
+            if(confirm("亲，此操作不可逆，您确定要删除吗？")){
+                let xhr = new XMLHttpRequest();
+                xhr.open("get","php/delAllOrder.php?userPhone="+getCookie("userphone"),true);
+                xhr.onreadystatechange=function(){
+                    if(xhr.readyState==4&&xhr.status==200){
+                        let d = xhr.responseText;
+                        if(d==1){
+                            // that.parentNode.parentNode.remove();
+                            window.open("index.html");
+                        }else if(d==0){
+                            alert('添加失败!');
+                        }
+                    }
+                }
+                xhr.send();
+                $(".shoppingCar").css({"display":"none"});
+                $(".contant").css({"display":"block"});
+            }
+        });
+        $("#shopCart02").click(function () {
+            window.open("order.html")
         })
     });
 
